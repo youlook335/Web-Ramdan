@@ -5,9 +5,10 @@ import Navbar from "./components/Navbar";
 import Home from "./components/Home";
 import About from "./components/About";
 import Prayertime from "./pages/Prayertime";
-import Zakat from "./pages/Zakat";
+import Surath from "./pages/Surath";
 import Quran from "./pages/Quran";
 import ParaPage from "./pages/ParaPage";
+import SurahDetail from "./pages/SurahDetail";
 
 const App = () => {
   return (
@@ -21,7 +22,8 @@ const App = () => {
         <Route path="/para/:paraNumber" element={<ParaPage />} />
         <Route path="/iftar" element={<Iftar />} />
         <Route path="/Prayertime" element={<Prayertime />} />
-        <Route path="/Zakat" element={<Zakat />} />
+        <Route path="/Surath" element={<Surath />} />
+        <Route path="/surah/:id" element={<SurahDetail/>} />
       </Routes>
     </Router>
   );

@@ -13,6 +13,7 @@ const Navbar = () => {
         { name: "Sehri", path: "/Sehri" },
         { name: "Iftar", path: "/Iftar" },
         { name: "Prayertime", path: "/Prayertime" },
+        { name: "Surath", path: "/Surath" },
     ];
 
     return (

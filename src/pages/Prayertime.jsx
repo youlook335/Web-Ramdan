@@ -44,7 +44,7 @@ const PrayerTimes = () => {
     }, [city, country]);
 
     const calculateRemainingTime = (time) => {
-        const [hours, minutes] = time.split(":" ).map(Number);
+        const [hours, minutes] = time.split(":").map(Number);
         let prayerTime = new Date();
         prayerTime.setHours(hours, minutes, 0);
 
@@ -61,32 +61,32 @@ const PrayerTimes = () => {
     };
 
     const convertTo12HourFormat = (time) => {
-        let [hours, minutes] = time.split(":" ).map(Number);
+        let [hours, minutes] = time.split(":").map(Number);
         let ampm = hours >= 12 ? "PM" : "AM";
         hours = hours % 12 || 12;
         return `${hours}:${minutes < 10 ? "0" : ""}${minutes} ${ampm}`;
     };
 
     if (!prayerTimes) {
-        return <h1 className="text-white text-center mt-10">⏳ Loading...</h1>;
+        return <h1 className="text-white text-center mt-10"> Loading...</h1>;
     }
 
     return (
         <div className="min-h-screen bg-gray-900 text-white p-6">
             <div className="flex justify-center mb-6">
-                <input 
-                    type="text" 
-                    className="p-2 bg-gray-800 text-white rounded" 
-                    placeholder="Enter City" 
-                    value={city} 
-                    onChange={(e) => setCity(e.target.value)} 
+                <input
+                    type="text"
+                    className="p-2 bg-gray-800 text-white rounded"
+                    placeholder="Enter City"
+                    value={city}
+                    onChange={(e) => setCity(e.target.value)}
                 />
-                <input 
-                    type="text" 
-                    className="p-2 bg-gray-800 text-white rounded ml-4" 
-                    placeholder="Enter Country" 
-                    value={country} 
-                    onChange={(e) => setCountry(e.target.value)} 
+                <input
+                    type="text"
+                    className="p-2 bg-gray-800 text-white rounded ml-4"
+                    placeholder="Enter Country"
+                    value={country}
+                    onChange={(e) => setCountry(e.target.value)}
                 />
             </div>
             <h1 className="text-center text-3xl font-bold mb-6">
@@ -101,7 +101,7 @@ const PrayerTimes = () => {
                             <p className="text-2xl font-bold">{convertTo12HourFormat(time)}</p>
                             <p className="text-gray-300">{calculateRemainingTime(time)}</p>
                             <p className="text-sm text-gray-400 mt-2">
-                                {prayerDurations[name] ? `⏳ ${time} - ${prayerDurations[name]}` : ""}
+                                {prayerDurations[name] ? ` ${time} - ${prayerDurations[name]}` : ""}
                             </p>
                         </div>
                     ))}
@@ -116,7 +116,7 @@ const PrayerTimes = () => {
                             <p className="text-2xl font-bold">{convertTo12HourFormat(time)}</p>
                             <p className="text-gray-300">{calculateRemainingTime(time)}</p>
                             <p className="text-sm text-gray-400 mt-2">
-                                {prayerDurations[name] ? `⏳ ${time} - ${prayerDurations[name]}` : ""}
+                                {prayerDurations[name] ? ` ${time} - ${prayerDurations[name]}` : ""}
                             </p>
                         </div>
                     ))}
