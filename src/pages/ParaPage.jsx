@@ -27,10 +27,10 @@ const ParaPage = () => {
     }, [paraNumber]);
 
     return (
-        <div className="min-h-screen bg-gray-900 text-white p-8 flex flex-col items-center">
-            <h1 className="text-4xl font-bold mb-6 border-b-2 pb-2">📖 پارہ {paraNumber}</h1>
+        <div className="bg-gray-900 text-white flex flex-col items-center min-h-screen p-6">
+            <h1 className="no-underline text-4xl font-bold mb-6 border-b-2 pb-2"> پارہ {paraNumber}</h1>
 
-            <div className="w-full max-w-5xl bg-gray-800 p-6 shadow-lg rounded-lg overflow-y-auto h-[80vh]">
+            <div className="w-full max-w-5xl bg-gray-800 p-6 shadow-lg rounded-lg">
                 {loading ? (
                     <p className="text-center text-gray-400">لوڈ ہو رہا ہے...</p>
                 ) : (
